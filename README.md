@@ -2,7 +2,7 @@
 
 # Link a heroku
 
-[](https://parcialarep.herokuapp.com/)
+![](https://parcialarep.herokuapp.com/)
 
 # Autor
 
