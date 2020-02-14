@@ -25,7 +25,7 @@ public class Cliente {
      BufferedReader in = null;
    
     try {
-        SocketAddress sockaddr = new InetSocketAddress("www.yahoo.com", 80);
+        SocketAddress sockaddr = new InetSocketAddress("https://parcialarep.herokuapp.com/", 80);
         echoSocket = new Socket();
         echoSocket.connect(sockaddr, 10000);
         out = new PrintWriter(echoSocket.getOutputStream(), true); 
