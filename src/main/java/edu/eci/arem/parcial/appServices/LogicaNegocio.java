@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 public class LogicaNegocio{
     private int[] numDatos;
 
+
+    private int sumatoria;
+
     public void getEntrada(String datos){
 
         String[] listDatos = datos.split(",");
@@ -64,10 +67,24 @@ public class LogicaNegocio{
       }
 
     public String printAnswer(){
-        String ans = "";
-        for(int i : numDatos){
-            ans += i;
+        String ans = "{ \"numDatos\" :[";
+        for(int i= 0; i < numDatos.length; i++){
+            if (i < numDatos.length){
+                ans += i+", ";
+            }else{
+                ans += "]";
+            }
+
         }
+        ans += "";
         return ans;
+    }
+
+    public void sumatoria(){
+        int sum = 0;
+        for(int i:numDatos){
+            sum += i;
+        }
+        setSumatoria(sum);
     }
 }
