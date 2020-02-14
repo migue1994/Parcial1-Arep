@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* edu.eci.arem.parcial.SparkWebApp
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* edu.eci.arem.parcial.Sever2
