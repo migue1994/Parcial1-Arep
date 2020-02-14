@@ -4,11 +4,11 @@
 
 [](https://parcialarep.herokuapp.com/)
 
-#Autor
+# Autor
 
 Miguel Ángel Rivera Rojas
 
-#Ejecutar proyecto
+# Ejecutar proyecto
 
 Para ejecutar el cliente se debe usar el siguiente comando:
 
