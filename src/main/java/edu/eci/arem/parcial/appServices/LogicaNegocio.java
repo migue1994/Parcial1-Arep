@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LogicaNegocio{
-    private Integer[] numDatos;
+    private int[] numDatos;
 
     public void getEntrada(String datos){
 
@@ -16,15 +16,15 @@ public class LogicaNegocio{
         
         listDatos = datos.split(",");
 
-        numDatos = new Integer[listDatos.length];
+        this.numDatos = new int[listDatos.length];
 
         for(int i = 0; i < numDatos.length; i++){
-            numDatos[i] = Integer.parseInt(listDatos[i]);
+            this.numDatos[i] = Integer.parseInt(listDatos[i]);
         }
 
     }
 
-    public static void mergeSort(int[] a, int n) {
+    public void mergeSort(int[] a, int n) {
         if (n < 2) {
             return;
         }
@@ -44,8 +44,7 @@ public class LogicaNegocio{
         merge(a, l, r, mid, n - mid);
     }
 
-    public static void merge(
-        int[] a, int[] l, int[] r, int left, int right) {
+    public void merge(int[] a, int[] l, int[] r, int left, int right) {
         
           int i = 0, j = 0, k = 0;
           while (i < left && j < right) {
@@ -63,4 +62,12 @@ public class LogicaNegocio{
               a[k++] = r[j++];
           }
       }
+
+    public String printAnswer(){
+        String ans = "";
+        for(int i : numDatos){
+            ans += i;
+        }
+        return ans;
+    }
 }

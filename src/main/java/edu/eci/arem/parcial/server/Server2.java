@@ -1,6 +1,9 @@
 package edu.eci.arem.parcial.server;
 
 import java.net.*;
+
+import edu.eci.arem.parcial.appServices.LogicaNegocio;
+
 import java.io.*;
 public class Server2 {
  public static void main(String[] args) throws IOException {
@@ -22,13 +25,18 @@ public class Server2 {
     PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
     BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     String inputLine, outputLine;
+    LogicaNegocio ln = new LogicaNegocio();
     while ((inputLine = in .readLine()) != null) {
         System.out.println("Received: " + inputLine);
+        ln.getEntrada(inputLine);
+        ln.mergeSort(ln.getNumDatos(), ln.getNumDatos().length);
+        ln.printAnswer();
+        
     if (! in .ready()) {
         break;
     }
     }
-    outputLine = "<!DOCTYPE html>" + "<html>" + "<head>" + "<meta charset=\"UTF-8\">" + "<title>Title of the document</title>\n" + "</head>" + "<body>" + "My Web Site" + "</body>" + "</html>" + inputLine;
+    outputLine = ln.printAnswer();
     out.println(outputLine);
     out.close(); in .close();
     clientSocket.close();
