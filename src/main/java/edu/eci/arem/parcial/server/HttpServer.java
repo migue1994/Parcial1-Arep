@@ -40,8 +40,8 @@ public class HttpServer {
             break;
         }
         }
-        outputLine = ln.printAnswer();
-        out.println(outputLine);
+        // outputLine = ln.printAnswer();
+        // out.println(outputLine);
         out.close(); in .close();
         clientSocket.close();
         }
