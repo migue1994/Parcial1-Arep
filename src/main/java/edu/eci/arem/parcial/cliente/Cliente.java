@@ -39,7 +39,7 @@ public class Cliente {
    
     while ((userInput = stdIn.readLine()) != null) {
         out.println(userInput);
-        System.out.println("echo: " + in .readLine());
+        System.out.println(in .readLine());
     
     }
         out.close(); in .close();

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Server2",
+            "request": "launch",
+            "mainClass": "edu.eci.arem.parcial.server.Server2",
+            "projectName": "parcial"
+        }
+    ]
+}

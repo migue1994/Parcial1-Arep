@@ -69,14 +69,14 @@ public class LogicaNegocio{
     public String printAnswer(){
         String ans = "{ \"numDatos\" :[";
         for(int i= 0; i < numDatos.length; i++){
-            if (i < numDatos.length){
-                ans += i+", ";
+            if (i < numDatos.length-1){
+                ans += numDatos[i]+", ";
             }else{
-                ans += "]";
+                sumatoria();
+                ans += "], \"sumatoria\" : "+sumatoria+"}";
             }
 
         }
-        ans += "";
         return ans;
     }
 
