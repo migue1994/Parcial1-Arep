@@ -5,7 +5,7 @@ import java.net.*;
 import edu.eci.arem.parcial.appServices.LogicaNegocio;
 
 import java.io.*;
-public class Server2 {
+public class HttpServer {
  public static void main(String[] args) throws IOException {
 
     ServerSocket serverSocket = null;
