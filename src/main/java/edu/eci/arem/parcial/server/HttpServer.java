@@ -5,12 +5,16 @@ import java.net.*;
 import edu.eci.arem.parcial.appServices.LogicaNegocio;
 
 import java.io.*;
+
+/**
+ * Servidor web
+ */
 public class HttpServer {
  public static void main(String[] args) throws IOException {
 
     ServerSocket serverSocket = null;
     try {
-        serverSocket = new ServerSocket(35000);
+        serverSocket = new ServerSocket(getPort());
     } catch (IOException e) {
         System.err.println("Could not listen on port: 35000.");
         System.exit(1);
@@ -45,5 +49,12 @@ public class HttpServer {
         out.close(); in .close();
         clientSocket.close();
         }
+    
+    }
+    static int getPort() {
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 35000;
     }
 }
